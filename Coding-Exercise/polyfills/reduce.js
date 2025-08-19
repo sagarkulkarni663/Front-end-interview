@@ -15,6 +15,7 @@ Array.prototype.myReduce = function (callback, initialvalue) {
     acc = callback(acc, this[i], i, this);
   }
   return acc;
+  
 };
 
 let customPolyfills = data.reduce((acc, item, index, array) => acc + item, 0);

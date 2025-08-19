@@ -1,0 +1,24 @@
+let data = {
+    firstName: "sagar",
+    lastName: "kulkarni",
+  };
+  
+  function knowDetails(...args) {
+    console.log(`hey iam ${this.firstName} ${this.lastName} from ${args}`);
+  }
+  
+  //polyfills for apply
+
+  Function.prototype.myCall = function (callback = {}, args=[]) {
+    if (typeof this !== "function") {
+      throw new Error(this + "this is not callable");
+    }
+    if (!Array.isArray(args)) {
+        throw new Error(this + "this is not array");
+      }
+    callback.function = this;
+    callback.function(args);
+  };
+  
+  knowDetails.myCall(data, ["hyderabad"]);
+  
