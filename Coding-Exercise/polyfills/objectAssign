@@ -1,0 +1,23 @@
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+const source1 = { d: 4, q: 5 };
+
+
+
+
+    function polifillAssign(target,...rest){
+        if (!target) throw new TypeError("Cannot convert undefined or null to object");
+        rest.forEach((item)=>{
+            if(item){
+                for(let key in item){
+                    if(Object.prototype.hasOwnProperty(item,key)){
+                        target[key]=item[key]
+                    }
+                  
+                }
+            }
+        })
+        return target
+    }
+
+console.log(polifillAssign(target,source,source1))

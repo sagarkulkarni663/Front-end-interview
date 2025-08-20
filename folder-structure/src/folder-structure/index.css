@@ -1,0 +1,17 @@
+.folder{
+    background:yellow;
+    padding:10px;
+    border-radius:10px;
+    border:grey 2px solid;
+}
+.sub-folder{
+    background:orange;
+    padding:10px;
+    border-radius:10px;
+    border:grey 2px solid;
+    margin-left:60px;
+}
+.parent{
+    display:'flex';
+    margin:40px
+}

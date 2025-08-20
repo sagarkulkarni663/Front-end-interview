@@ -1,0 +1,9 @@
+const arr='sagar';
+// console.log(Array.from(arr))
+
+
+Array.prototype.Form=function(data){
+    return [].slice.call(data)
+}
+
+console.log([].Form("sagar"))
